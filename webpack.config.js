@@ -5,6 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: {
+    polyfills: ['babel-polyfill'],
     app: './src/index.js',
     analytics: './src/analytics.js'
   },
@@ -27,12 +28,7 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'babel-loader',
-        options: { 
-          presets: [ 
-            [ 'es2015', { 'modules': false } ] 
-          ] 
-        }
+        loader: 'babel-loader'
       },
       {
         test: /\.css$/,
