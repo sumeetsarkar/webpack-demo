@@ -31,7 +31,7 @@ function loadComponentAsync () {
           .catch(error => `Error loading component - ${error}`);
 }
 
-// demonstrates stage 0 async await to lazy load greet component
+// demonstrates stage 3 async await to lazy load greet component
 // no promise returned, gets access to loaded component inline
 // if result of await import is returned from function, it is returned as promise
 async function loadComponent () {
